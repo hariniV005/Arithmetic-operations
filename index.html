@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addition</title>
+</head>
+<script type="text/javascript">
+    function add()
+    {
+    var num1=parseFloat(document.getElementById('v1').value);
+    var num2=parseFloat(document.getElementById('v2').value);
+    var sum=num1+num2;
+    document.getElementById('res').innerText="ADDITION OF "+num1+" + "+num2+" IS "+sum;
+}
+    function sub()
+    {
+        var n1=parseFloat(document.getElementById('v1').value);
+        var n2=parseFloat(document.getElementById('v2').value);
+        var s=n1-n2;
+        document.getElementById('res').innerText="SUBTRACTION OF "+n1+" - "+n2+" IS "+s;
+    }
+    function mul()
+    {
+        var n1=parseFloat(document.getElementById('v1').value);
+        var n2=parseFloat(document.getElementById('v2').value);
+        var m = n1*n2;
+        document.getElementById('res').innerText="MULTIPLICATION OF "+n1+" X "+n2+" IS "+m;
+    }
+    function div()
+    {
+        var n1=parseFloat(document.getElementById('v1').value);
+        var n2=parseFloat(document.getElementById('v2').value);
+        var d=n1/n2;
+        document.getElementById('res').innerText="DIVISION OF "+n1+" / "+n2+" IS "+d.toFixed(2);
+    }
+</script>
+<style>
+p{
+    color: black;
+    font-size: x-large;
+    text-align: center;
+    border: 20px outset rgb(235, 63, 112);
+}
+button{
+    text-align: center;
+}
+input.a{
+    width: 250px;
+}
+</style>
+
+<body style="background-color: rgb(245, 237, 240); ">
+    <h1 style="border: solid; color:rgb(235, 63, 112);text-align: center;">ARTHMETIC OPERATIONS</h1>
+    <label style="font-size: 25px;">enter first value</label>
+    <input style="background-color: antiquewhite;color: black;"type="text" id="v1"><br><br>
+    <label style="font-size: 25px;">enter second value</label>
+    <input style="background-color: antiquewhite;color: black;"type="text" id="v2"><br><br>
+<button style="background-color: rgb(119, 41, 183); color: white;" onclick="add()">ADD</button>
+<button style="background-color:rgb(119, 41, 183); color: white;" onclick="sub()"> SUB</button>
+<button style="background-color: rgb(119, 41, 183); color: white;" onclick="mul()">MULTIPLY</button>
+<button style="background-color: rgb(119, 41, 183) ;color:white;" onclick="div()">DIVISION</button><br>
+<p id="res"></p>
+</body>
+</html>
